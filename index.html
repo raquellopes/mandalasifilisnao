@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Infográfico- Mandala da prevenção combinada</title>
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet"
+		type="text/css">
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
+		id="bootstrap-css">
+	<link href="styles/KBmapmarkers.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/main.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+		</script>
+	<script type="text/javascript" src="js/KBmapmarkers.js"></script>
+	<script type="text/javascript" src="js/KBmapmarkersCords.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+	<div class="topo">
+	<div class="row">
+		<div class="col-md-12">
+			<img class="img-responsive" style="float: left;" width="140" height="40" src="images/logo-menu.png">
+
+			<h1 class="titulo">MANDALA DE PREVENÇÃO COMBINADA</h1>
+			<hr class="line-title">
+		
+		</div>
+	</div>
+</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<p> A Prevenção Combinada associa diferentes métodos de prevenção ao HIV, às IST e às
+				hepatites virais (ao mesmo tempo ou em sequência), conforme as características e o
+				momento de vida de cada pessoa. Todos esses métodos podem ser utilizados pela
+				pessoa isoladamente ou combinados.
+				Toque abaixo nas fatias da mandala e conheça as formas de prevenção ao HIV, às
+				IST e às hepatites virais. </p>
+		</div>
+	</div>
+
+</div>
+
+
+	<div class="d-flex align-items-center justify-content-center h-100" style="margin-top: 20px;">
+		<div class="d-flex flex-column">
+			<section class="KBmap" id="KBtestmap">
+			</section>
+		</div>
+	</div>
+
+</body>
+
+<script>
+	var json = {
+		"mapMarker1": {
+			"cordX": "42.00",
+			"cordY": "60.00",
+			"icon": "plus.svg",
+			"modal": {
+				"title": "Prevenção combinada",
+				"content": '<p> Uma estratégia de prevenção que faz uso combinado de intervenções biomédicas, comportamentais e estruturais aplicadas no nível dos indivíduos, de suas relações e dos grupos sociais a que pertencem, mediante ações que levem em consideração suas necessidades e especificidades e as formas de transmissão do vírus HIV. Para mais informações acesse o link a seguir: <a href="http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/o-que-e-prevencao-combinada">http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/o-que-e-prevencao-combinada</a></p>'
+			}
+		},
+
+
+		"mapMarker2": {
+			"cordX": "33.11",
+			"cordY": "67.21",
+			"icon": "plus.svg",
+			"modal": {
+				"title": "Populações-chave e prioritárias",
+				"content": '<p> As populações-chave estão representadas por alguns segmentos populacionais que, muitas vezes, estão inseridos em contextos que aumentam suas vulnerabilidades e apresentam prevalência para o HIV superior à média nacional, que é de 0,4%. Essas populações são: gays e outros HSH, pessoas trans, pessoas que usam álcool e outras drogas, pessoas privadas de liberdade, trabalhadoras do sexo. As populações prioritárias estão representadas por segmentos populacionais que possuem caráter transversal e suas vulnerabilidades estão relacionadas às dinâmicas sociais locais e às suas especificidades. Essas populações são: população de adolescentes e jovens, população negra, população indígena, população em situação de rua.'
+			}
+		},
+
+		"mapMarker3": {
+			"cordX": "50.0",
+			"cordY": "12.93",
+			"icon": "plus.svg",
+			"modal": {
+				"title": "PEP (Profilaxia Pós-Exposição de Risco)",
+				"content": '<p>É uma medida de prevenção de urgência à infecção pelo HIV, hepatites virais e outras infecções sexualmente transmissíveis (IST), que consiste no uso de medicamentos para reduzir o risco de adquirir essas infecções. Deve ser utilizada após qualquer situação em que exista risco de contágio, tais como: violência sexual; relação sexual desprotegida (sem o uso de camisinha ou com rompimento da camisinha); acidente ocupacional (com instrumentos perfurocortantes ou contato direto com material biológico). Para mais informações acesse o link a seguir: <a href="http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/pep-profilaxia-pos-exposicao-ao-hiv">http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/pep-profilaxia-pos-exposicao-ao-hiv</a></p>'
+			}
+		},
+
+
+		"mapMarker4": {
+			"cordX": "69.0",
+			"cordY": "30.93",
+			"icon": "plus.svg",
+			"modal": {
+				"title": "PrEP (Profilaxia Pré-Exposição)",
+				"content": '<p>É um novo método de prevenção à infecção pelo HIV. A PrEP consiste na tomada diária de um comprimido que impede que o vírus causador da aids infecte o organismo, antes de a pessoa ter contato com o vírus. Para mais informações acesse o link a seguir: <a href="http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/prep-profilaxia-pre-exposicao">http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/prep-profilaxia-pre-exposicao</a></p>'
+			}
+		},
+
+		"mapMarker5": {
+			"cordX": "72.11",
+			"cordY": "58.93",
+			"icon": "plus.svg",
+			"modal": {
+				"title": "Prevenção e transmissão vertical",
+				"content": '<p>Durante a gestação e no parto, pode ocorrer a transmissão do HIV (vírus causador da aids), e também da sífilis e da hepatite B para o bebê. O HIV também pode ser transmitido durante a amamentação. Por isso as gestantes, e também suas parcerias sexuais, devem realizar os testes para HIV, sífilis e hepatites durante o pré-natal e no parto. Para mais informações acesse o link a seguir: <a href="http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/pre-natal">http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/pre-natal</a> </p>'
+			}
+		},
+
+
+
+		"mapMarker6": {
+			"cordX": "60.11",
+			"cordY": "83.93",
+			"icon": "plus.svg",
+			"modal": {
+				"title": "Imunizar para HBV e HPV",
+				"content": '<p> Grave problema de saúde pública no Brasil e no mundo, pode ser causada por vírus ou pelo uso de alguns remédios, álcool e outras drogas, assim como por doenças autoimunes, metabólicas e genéticas. As hepatites virais são doenças de notificação compulsória, ou seja, cada ocorrência deve ser notificada por um profissional de saúde. Esse registro é importante para mapear os casos de hepatites no país e ajuda a traçar diretrizes para as políticas públicas no setor. O SUS disponibiliza a vacina para Para mais informações acesse o link a seguir: <a href="http://www.aids.gov.br/pt-br/node/%2057805">http://www.aids.gov.br/pt-br/node/%2057805</a> </p>'
+			}
+		},
+
+
+
+		"mapMarker7": {
+			"cordX": "40.00",
+			"cordY": "91.93",
+			"icon": "plus.svg",
+			"modal": {
+				"title": "Redução de danos",
+				"content": '<p>	 No âmbito da prevenção às IST, ao HIV/aids e às hepatites virais, as ações de redução de danos estão voltadas, principalmente, às pessoas que usam álcool e outras drogas, silicone líquido industrial e hormônios e têm por objetivo evitar a transmissão, promover a melhoria da qualidade de vida e garantir o acesso à saúde. Para mais informações acesse o link a seguir: <a href="http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/reducao-de-danos">http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/reducao-de-danos</a> </p>'
+			}
+		},
+
+		"mapMarker8": {
+			"cordX": "19.00",
+			"cordY": "83.93",
+			"icon": "plus.svg",
+			"modal": {
+				"title": "Diagnosticar e tratar as pessoas com IST e HV",
+				"content": '<p> O SUS oferece gratuitamente testes para diagnóstico do HIV (o vírus causador da aids), e também para diagnostico da sífilis e das hepatites B e C. Existem, no Brasil, dois tipos de testes: os exames laboratoriais e os testes rápidos. Para mais informações acesse os links a seguir:  <a href="http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/testagem">http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/testagem</a> , <a href="http://www.aids.gov.br/pt-br/publico-geral/o-que-e-hiv/tratamento-para-o-hiv">http://www.aids.gov.br/pt-br/publico-geral/o-que-e-hiv/tratamento-para-o-hiv</a> e <a href="http://www.aids.gov.br/pt-br/pub/2015/protocolo-clinico-e-diretrizes-terapeuticas-para-atencao-integral-pessoas-com-infeccoes">http://www.aids.gov.br/pt-br/pub/2015/protocolo-clinico-e-diretrizes-terapeuticas-para-atencao-integral-pessoas-com-infeccoes</a> </p>'
+			}
+		},
+
+
+		"mapMarker9": {
+			"cordX": "9.00",
+			"cordY": "66.93",
+			"icon": "plus.svg",
+			"modal": {
+				"title": "Usar preservativo masculino, feminino e gel lubrificante:",
+				"content": '<p>	 O preservativo, ou camisinha é o método mais conhecido, acessível e eficaz para se prevenir da infecção pelo HIV e outras infecções sexualmente transmissíveis (IST), como a sífilis, a gonorreia e também alguns tipos de hepatites. Além disso, ele evita uma gravidez não planejada. Existem dois tipos de camisinha: a masculina, que é feita de látex e deve ser colocada no pênis ereto antes da penetração; e a feminina, que é feita de latex ou borracha nitrílica e é usada internamente na vagina, podendo ser colocada algumas horas antes da relação sexual, não sendo necessário aguardar a ereção do pênis. Para mais informações acesse o link a seguir: <a href="http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/preservativo">http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/preservativo</a></p>'
+			}
+		},
+
+		"mapMarker10": {
+			"cordX": "12.00",
+			"cordY": "29.93",
+			"icon": "plus.svg",
+			"modal": {
+				"title": "Tratar todas as pessoas vivendo com HIV/aids:",
+				"content": '<p>	 Os primeiros medicamentos antirretrovirais (ARV) surgiram na década de 1980. Eles agem inibindo a multiplicação do HIV no organismo e, consequentemente, evitam o enfraquecimento do sistema imunológico. O desenvolvimento e a evolução dos antirretrovirais para tratar o HIV transformaram o que antes era uma infecção quase sempre fatal em uma condição crônica controlável, apesar de ainda não haver cura. Desde 1996, o Brasil distribui gratuitamente pelo SUS (Sistema Único de Saúde) todos os medicamentos antirretrovirais e, desde 2013, o SUS garante tratamento para todas as pessoas vivendo com HIV (PVHIV), independentemente da carga viral. Para mais informações acesse o link a seguir: <a href="http://www.aids.gov.br/pt-br/publico-geral/o-que-e-hiv/tratamento-para-o-hiv">http://www.aids.gov.br/pt-br/publico-geral/o-que-e-hiv/tratamento-para-o-hiv</a></p>'
+			}
+		},
+
+
+		"mapMarker11": {
+			"cordX": "28.00",
+			"cordY": "12.93",
+			"icon": "plus.svg",
+			"modal": {
+				"title": "Testagem regular para o HIV, outras IST e HV:",
+				"content": '<p>	 o SUS oferece gratuitamente testes para diagnóstico do HIV (o vírus causador da aids), e também para diagnostico da sífilis e das hepatites B e C. Existem, no Brasil, dois tipos de testes: os exames laboratoriais e os testes rápidos. Todos os testes possuem um período denominado “janela diagnóstica”, que corresponde ao tempo entre o contato com o vírus e a detecção do marcador da infecção (antígeno ou anticorpo). Isso quer dizer que, mesmo se a pessoa estiver infectada, o resultado do teste pode dar negativo se ela estiver no período de janela. Dessa forma, nos casos de resultados negativos, e sempre que persistir a suspeita de infecção, o teste deve ser repetido após, pelo menos, 30 dias. Para mais informações acesse o link a seguir: <a href="http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/testagem">http://www.aids.gov.br/pt-br/publico-geral/prevencao-combinada/testagem</a></p>'
+			}
+		},
+
+	};
+
+	(function ($) {
+		$(document).ready(function () {
+
+			createKBmap('KBtestmap', 'images/mandala.jpg');
+
+			KBtestmap.importJSON(json);
+
+			KBtestmap.showAllMapMarkers();
+
+		});
+
+	})(jQuery);
+</script>
+
+
+
+<p class="text-center" style= margin-top:20px;> Fonte da imagem: <a
+		href="http://www.aids.gov.br/sites/default/files/media/pagina/2019/57877_/280618.jpg">
+		http://www.aids.gov.br/sites/default/files/media/pagina/2019/57877_/280618.jpg</a> 
+</p>
+
+
+<div class="container">
+	<hr><img src="images/regua-sifilisnao.png" alt="" class="img-responsive center-block" id="parceiros"> </hr>
+</div>
+
+
+
+<!-- Scripts -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-36251023-1']);
+	_gaq.push(['_setDomainName', 'jqueryscript.net']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+			'.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<script src="scripts/vendor.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="scripts/main.js"></script>
+
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+
+</html>

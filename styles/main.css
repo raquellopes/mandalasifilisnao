@@ -1,0 +1,75 @@
+
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #333;
+    
+}
+
+p{
+/*     margin-left: 20px; 
+    line-height: 24px; */
+}
+
+a{
+    color: #6d001e;
+}
+
+.logo-sifilis{
+height: 150px;
+width: 200px;
+
+}
+.titulo{
+    color: #a00303;
+}
+
+
+.filter-button {
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    color: #56270c;
+    margin-bottom: 30px;
+    border-color: transparent
+}
+
+.filter-button:hover {
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-align: center
+}
+
+.btn-default:active .filter-button:active,
+.filter-button:hover {
+    color: #fff;
+    background-color:  #e7b786;
+}
+
+
+.row.centralizar {
+   margin-top: 200px;
+}
+
+.KBmap_cords {
+   display: none;
+}
+
+
+.line-title{
+    margin-top: 43px;
+
+}
+
+.topo{
+    display: block;
+    margin: auto;
+}
