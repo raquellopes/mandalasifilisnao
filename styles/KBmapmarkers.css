@@ -22,6 +22,8 @@
 .KBmap__mapHolder img {
   max-width: 80%;
   width: 100%;
+  margin: auto;
+  display: block;
 }
 
 @-webkit-keyframes mapMarkerAnimation {
@@ -62,9 +64,8 @@
   position: absolute;
   -webkit-transform: translate(-50%, -100%);
   transform: translate(-50%, -100%);
-  /*  top: 42%;
-  left: 69%; */
   z-index: 1;
+
 }
 
 .KBmap__marker.current {

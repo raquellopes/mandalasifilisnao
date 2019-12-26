@@ -14,42 +14,40 @@
 	<link rel="stylesheet" href="styles/main.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-		</script>
+	</script>
 	<script type="text/javascript" src="js/KBmapmarkers.js"></script>
 	<script type="text/javascript" src="js/KBmapmarkersCords.js"></script>
 </head>
 
 <body>
 
-<div class="container">
-	<div class="topo">
-	<div class="row">
-		<div class="col-md-12">
-			<img class="img-responsive" style="float: left;" width="140" height="40" src="images/logo-menu.png">
-
-			<h1 class="titulo">MANDALA DE PREVENÇÃO COMBINADA</h1>
-			<hr class="line-title">
-		
+	<div class="container">
+		<div class="header">
+		<div class="row">
+			<div class="col-md-12">
+				<img class="img-responsive" style="float: left;" width="140" height="40" src="images/logo-menu.png">
+				<h1 class="text-center titulo">MANDALA DE PREVENÇÃO COMBINADA</h1>
+				<hr class="line-title">
+			</div>
 		</div>
-	</div>
-</div>
-
-
-	<div class="row">
-		<div class="col-md-12">
-			<p> A Prevenção Combinada associa diferentes métodos de prevenção ao HIV, às IST e às
-				hepatites virais (ao mesmo tempo ou em sequência), conforme as características e o
-				momento de vida de cada pessoa. Todos esses métodos podem ser utilizados pela
-				pessoa isoladamente ou combinados.
-				Toque abaixo nas fatias da mandala e conheça as formas de prevenção ao HIV, às
-				IST e às hepatites virais. </p>
 		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<p> A Prevenção Combinada associa diferentes métodos de prevenção ao HIV, às IST e às
+					hepatites virais (ao mesmo tempo ou em sequência), conforme as características e o
+					momento de vida de cada pessoa. Todos esses métodos podem ser utilizados pela
+					pessoa isoladamente ou combinados.
+					Toque abaixo nas fatias da mandala e conheça as formas de prevenção ao HIV, às
+					IST e às hepatites virais. </p>
+			</div>
+		</div>
+
 	</div>
 
-</div>
-
-
-	<div class="d-flex align-items-center justify-content-center h-100" style="margin-top: 20px;">
+	
+	<div class="imagem-container" style="margin-top: 20px;">
 		<div class="d-flex flex-column">
 			<section class="KBmap" id="KBtestmap">
 			</section>
@@ -61,7 +59,7 @@
 <script>
 	var json = {
 		"mapMarker1": {
-			"cordX": "42.00",
+			"cordX": "50.00",
 			"cordY": "60.00",
 			"icon": "plus.svg",
 			"modal": {
@@ -72,8 +70,8 @@
 
 
 		"mapMarker2": {
-			"cordX": "33.11",
-			"cordY": "67.21",
+			"cordX": "36.11",
+			"cordY": "58.21",
 			"icon": "plus.svg",
 			"modal": {
 				"title": "Populações-chave e prioritárias",
@@ -82,8 +80,8 @@
 		},
 
 		"mapMarker3": {
-			"cordX": "50.0",
-			"cordY": "12.93",
+			"cordX": "57.0",
+			"cordY": "25.93",
 			"icon": "plus.svg",
 			"modal": {
 				"title": "PEP (Profilaxia Pós-Exposição de Risco)",
@@ -93,8 +91,8 @@
 
 
 		"mapMarker4": {
-			"cordX": "69.0",
-			"cordY": "30.93",
+			"cordX": "68.0",
+			"cordY": "36.93",
 			"icon": "plus.svg",
 			"modal": {
 				"title": "PrEP (Profilaxia Pré-Exposição)",
@@ -103,8 +101,8 @@
 		},
 
 		"mapMarker5": {
-			"cordX": "72.11",
-			"cordY": "58.93",
+			"cordX": "71.11",
+			"cordY": "56.93",
 			"icon": "plus.svg",
 			"modal": {
 				"title": "Prevenção e transmissão vertical",
@@ -115,8 +113,8 @@
 
 
 		"mapMarker6": {
-			"cordX": "60.11",
-			"cordY": "83.93",
+			"cordX": "64.11",
+			"cordY": "71.93",
 			"icon": "plus.svg",
 			"modal": {
 				"title": "Imunizar para HBV e HPV",
@@ -125,10 +123,9 @@
 		},
 
 
-
 		"mapMarker7": {
-			"cordX": "40.00",
-			"cordY": "91.93",
+			"cordX": "50.00",
+			"cordY": "79.93",
 			"icon": "plus.svg",
 			"modal": {
 				"title": "Redução de danos",
@@ -137,8 +134,8 @@
 		},
 
 		"mapMarker8": {
-			"cordX": "19.00",
-			"cordY": "83.93",
+			"cordX": "36.00",
+			"cordY": "69.93",
 			"icon": "plus.svg",
 			"modal": {
 				"title": "Diagnosticar e tratar as pessoas com IST e HV",
@@ -148,8 +145,8 @@
 
 
 		"mapMarker9": {
-			"cordX": "9.00",
-			"cordY": "66.93",
+			"cordX": "30.00",
+			"cordY": "54.93",
 			"icon": "plus.svg",
 			"modal": {
 				"title": "Usar preservativo masculino, feminino e gel lubrificante:",
@@ -158,8 +155,8 @@
 		},
 
 		"mapMarker10": {
-			"cordX": "12.00",
-			"cordY": "29.93",
+			"cordX": "31.00",
+			"cordY": "37.93",
 			"icon": "plus.svg",
 			"modal": {
 				"title": "Tratar todas as pessoas vivendo com HIV/aids:",
@@ -169,8 +166,8 @@
 
 
 		"mapMarker11": {
-			"cordX": "28.00",
-			"cordY": "12.93",
+			"cordX": "42.00",
+			"cordY": "25.93",
 			"icon": "plus.svg",
 			"modal": {
 				"title": "Testagem regular para o HIV, outras IST e HV:",
@@ -196,9 +193,7 @@
 
 
 
-<p class="text-center" style= margin-top:20px;> Fonte da imagem: <a
-		href="http://www.aids.gov.br/sites/default/files/media/pagina/2019/57877_/280618.jpg">
-		http://www.aids.gov.br/sites/default/files/media/pagina/2019/57877_/280618.jpg</a> 
+<p class="text-center" style=margin-top:20px;> Fonte da imagem: <a href="http://www.aids.gov.br/sites/default/files/media/pagina/2019/57877_/280618.jpg"> http://www.aids.gov.br/sites/default/files/media/pagina/2019/57877_/280618.jpg</a>
 </p>
 
 
